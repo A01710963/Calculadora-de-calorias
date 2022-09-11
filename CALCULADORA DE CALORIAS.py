@@ -18,13 +18,13 @@ def menua ():
     print ("4. Muy activo")
     
 def menu ():
-    """Este menu es el menu general, le permitira al usuario elegir cuando salir del programa"""
+     """Este menu es el menu general, le permitira al usuario elegir cuando salir del programa"""
     print ("1. Calcular mi gasto calorico")
     print ("2. Salir")
 
 def main ():
     while(True):
-        """Aqui el usuario seleccionara su sexo"""
+         """Aqui el usuario seleccionara su sexo"""
             print ("Selecciona una opcion")
             menu()
             opcion = (input())
@@ -32,27 +32,43 @@ def main ():
                 print ("¿Cual es tu sexo?")
                 menus()
                 opcions = (input())
-                if opcions == '1':
-                    s = 1
-                elif opcions == '2':
-                    s = 0.9
-        """Aqui el usuario seleccionara su nivel de actividad diaria"""
+                while (True):
+                    if opcions == '1':
+                        s = 1
+                        break
+                    elif opcions == '2':
+                        s = 0.9
+                        break
+                    else:
+                        print ("Respuesta invalida, asegurate de haber insertado el numero correcto")
+                        menus()
+                        opcions = (input())
+                 """Aqui el usuario seleccionara su nivel de actividad diaria"""
                 print ("¿Cual es tu nivel de actividad diaria?")
                 menua()
                 opciona = (input())
-                if opciona == '1':
-                    a = 1.2
-                elif opciona == '2':
-                    a = 1.375
-                elif opciona == '3':
-                    a = 1.55
-                elif opciona == '4':
-                    a = 1.725
-        """En estos dos apartados ingresara su peso y su edad"""
+                while (True):
+                    if opciona == '1':
+                        a = 1.2
+                        break
+                    elif opciona == '2':
+                        a = 1.375
+                        break
+                    elif opciona == '3':
+                        a = 1.55
+                        break
+                    elif opciona == '4':
+                        a = 1.725
+                        break
+                    else:
+                        print ("Respuesta invalida, asegurate de haber insertado el numero correcto")
+                        menua()
+                        opciona = (input())
+                """En estos dos apartados ingresara su peso y su edad"""
                 p = float(input("Ingresa tu peso en kilogramos: "))
                 
                 e = int(input("Ingresa tu edad en años: "))
-        """Imprimimos la respuesta"""
+                """Imprimimos la respuesta"""
                 print ("Tu consumo diario de calorias es de: ", operacion(p,s,e,a))
                 
             elif opcion == '2':

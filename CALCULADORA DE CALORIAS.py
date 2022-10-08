@@ -6,25 +6,25 @@ def operacion (p, s, e, a):
     cal = a*(p*(s*e))
     return cal
 def menus ():
-    """Este menu le permitira al usuario elegir su sexo """
+    #Este menu le permitira al usuario elegir su sexo 
     print ("1. Masculino")
     print ("2. Femenino")
 
 def menua ():
-    """Este menu le permitira al usuario elegir su nivel de actividad"""
+    #Este menu le permitira al usuario elegir su nivel de actividad
     print ("1. No muy activo")
     print ("2. Poco activo")
     print ("3. Activo")
     print ("4. Muy activo")
     
 def menu ():
-     """Este menu es el menu general, le permitira al usuario elegir cuando salir del programa"""
+    #Este menu es el menu general, le permitira al usuario elegir cuando salir del programa
     print ("1. Calcular mi gasto calorico")
     print ("2. Salir")
 
 def main ():
     while(True):
-         """Aqui el usuario seleccionara su sexo"""
+            #Aqui el usuario seleccionara su sexo
             print ("Selecciona una opcion")
             menu()
             opcion = (input())
@@ -43,7 +43,7 @@ def main ():
                         print ("Respuesta invalida, asegurate de haber insertado el numero correcto")
                         menus()
                         opcions = (input())
-                 """Aqui el usuario seleccionara su nivel de actividad diaria"""
+                #Aqui el usuario seleccionara su nivel de actividad diaria
                 print ("¿Cual es tu nivel de actividad diaria?")
                 menua()
                 opciona = (input())
@@ -64,11 +64,11 @@ def main ():
                         print ("Respuesta invalida, asegurate de haber insertado el numero correcto")
                         menua()
                         opciona = (input())
-                """En estos dos apartados ingresara su peso y su edad"""
+                #En estos dos apartados ingresara su peso y su edad
                 p = float(input("Ingresa tu peso en kilogramos: "))
                 
                 e = int(input("Ingresa tu edad en años: "))
-                """Imprimimos la respuesta"""
+                #Imprimimos la respuesta
                 print ("Tu consumo diario de calorias es de: ", operacion(p,s,e,a))
                 
             elif opcion == '2':
